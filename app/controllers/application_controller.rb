@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  rescue_from Exception, with: :error500
-  rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, with: :error404
+  if Rails.env.production?
+    rescue_from Exception, with: :error500
+    rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, with: :error404
+  end
 
   def error404(e)
    render 'errors/error404', status: 404, formats: [:html]
