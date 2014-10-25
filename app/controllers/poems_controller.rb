@@ -1,4 +1,5 @@
 class PoemsController < ApplicationController
+  PER = 3
   def new
     @poem = Poem.new
   end
@@ -13,8 +14,7 @@ class PoemsController < ApplicationController
   end
 
   def index
-    @poems = Poem.page(params[:page]).per(3).order(:created_at)
-
+    @poems = Poem.page(params[:page]).per(PER).order(:created_at)
   end
 
   def show
