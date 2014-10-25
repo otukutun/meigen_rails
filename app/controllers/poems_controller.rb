@@ -13,6 +13,8 @@ class PoemsController < ApplicationController
   end
 
   def index
+    @poems = Poem.page(params[:page]).per(3).order(:created_at)
+
   end
 
   def show

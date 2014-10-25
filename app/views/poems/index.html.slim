@@ -1,2 +1,14 @@
 h1 Poems#index
 p Find me in app/views/poems/index.html.slim
+
+.page-header
+  h1
+    名言一覧
+
+  .list-group
+    - @poems.each do |p|
+      = p.text
+      = p.author
+      br
+
+    = paginate @poems
