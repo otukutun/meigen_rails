@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
