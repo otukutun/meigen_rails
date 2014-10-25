@@ -13,6 +13,10 @@ html
       .container
          .navbar-header
            = link_to '名言', '#', class: 'navbar-brand'
+         .collapse.navbar-collapse#bs-example-navbar-collapse-1
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to 'Twitterでログイン', '/auth/twitter'
 
     .container
       = yield
