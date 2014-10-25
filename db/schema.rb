@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025072643) do
+ActiveRecord::Schema.define(version: 20141025144150) do
 
   create_table "poems", force: true do |t|
     t.text     "text"
@@ -19,5 +19,16 @@ ActiveRecord::Schema.define(version: 20141025072643) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "provider",   null: false
+    t.string   "uid",        null: false
+    t.string   "nickname",   null: false
+    t.string   "image_url",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
 
 end
