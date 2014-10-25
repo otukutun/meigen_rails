@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'poems/show'
-
-  get 'poems/new'
-
-  get 'poems/create'
-
-  get 'poems/view'
-
-  get 'poems/index'
+  resources :poems
+  # get 'poems/show'
+  #
+  # get 'poems/new'
+  #
+  # get 'poems/create'
+  #
+  # get 'poems/view'
+  #
+  # get 'poems/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

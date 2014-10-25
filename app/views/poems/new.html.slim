@@ -1,2 +1,9 @@
 h1 Poems#new
 p Find me in app/views/poems/new.html.slim
+
+= form_for @poem do |f|
+  = f.label :text
+  = f.text_field :text
+  = f.label :author
+  = f.text_field :author
+  = f.submit
