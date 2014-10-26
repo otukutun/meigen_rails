@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,6 +43,7 @@ gem 'aws-sdk'
 
 # nested sets model
 gem 'awesome_nested_set'
+gem 'the_sortable_tree', '~> 2.5.0'
 
 group :development do
   gem 'better_errors'
