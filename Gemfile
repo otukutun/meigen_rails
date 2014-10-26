@@ -40,6 +40,9 @@ gem 'omniauth-twitter'
 gem 'paperclip'
 gem 'aws-sdk'
 
+# nested sets model
+gem 'awesome_nested_set'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

@@ -28,6 +28,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    awesome_nested_set (3.0.1)
+      activerecord (>= 4.0.0, < 5)
     aws-sdk (1.51.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -211,6 +213,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_nested_set
   aws-sdk
   better_errors
   binding_of_caller
