@@ -16,7 +16,10 @@ html
          .collapse.navbar-collapse#bs-example-navbar-collapse-1
           ul.nav.navbar-nav.navbar-right
             li
-              = link_to 'Twitterでログイン', '/auth/twitter'
+              - if logged_in?
+                = link_to 'ログアウト', logout_path
+              - else
+                = link_to 'Twitterでログイン', '/auth/twitter'
 
     .container
       - if flash[:notice]

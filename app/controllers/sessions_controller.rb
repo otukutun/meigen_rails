@@ -4,4 +4,9 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     redirect_to poems_path, notice: 'ログインしました'
   end
+
+  def destroy
+    reset_session
+    redirect_to poems_path, notice: 'ログアウトしました'
+  end
 end
