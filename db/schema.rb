@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025144150) do
+ActiveRecord::Schema.define(version: 20141026063314) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["rgt"], name: "index_categories_on_rgt"
 
   create_table "poems", force: true do |t|
     t.text     "text"
