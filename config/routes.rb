@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :categories
+  end
+
  # root 'welcome#index'
 
  get 'auth/:provider/callback' => 'sessions#create'
