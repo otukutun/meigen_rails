@@ -1,4 +1,5 @@
 class PoemsController < ApplicationController
+  before_action :authenticate, only: [:new, :create]
   PER = 3
   def new
     @poem = Poem.new
