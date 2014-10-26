@@ -8,6 +8,7 @@ p Find me in app/views/poems/index.html.slim
   .list-group
     - @poems.each do |p|
       = p.text
+      | &nbsp;by&nbsp;
       = p.author
       br
 
