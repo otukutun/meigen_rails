@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 # scrayping
 gem 'rest-client'
 
+# environment variables
+gem 'settingslogic'
+
 # pagination
 gem 'kaminari'
 gem 'kaminari-bootstrap'
