@@ -23,6 +23,7 @@ class PoemsController < ApplicationController
   end
 
   def view
+    response = RestClient.get 'http://meigen.o-bit.biz/api'
     render text: 'text'
   end
 
