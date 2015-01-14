@@ -4,11 +4,16 @@ Rails.application.routes.draw do
     resources :categories
   end
 
- # root 'welcome#index'
+  mount API => '/'
+  # root 'welcome#index'
 
- get 'auth/:provider/callback' => 'sessions#create'
- get '/logout' => 'sessions#destroy', as: :logout
- resources :poems, except: :destroy
+  get 'auth/:provider/callback' => 'sessions#create'
+  get '/logout' => 'sessions#destroy', as: :logout
+  resources :poems, except: :destroy do
+    collection do
+      get :view
+    end
+  end
 
 
   match '*path' => 'application#error404', via: :all

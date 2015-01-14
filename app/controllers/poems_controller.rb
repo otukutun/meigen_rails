@@ -22,6 +22,10 @@ class PoemsController < ApplicationController
     @poem = Poem.find(params[:id])
   end
 
+  def view
+    render text: 'text'
+  end
+
   private
   def poem_params
     params.require(:poem).permit(:text, :author)

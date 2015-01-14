@@ -29,6 +29,9 @@ gem 'slim-rails'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# scrayping
+gem 'rest-client'
+
 # pagination
 gem 'kaminari'
 gem 'kaminari-bootstrap'
@@ -44,6 +47,8 @@ gem 'aws-sdk'
 # nested sets model
 gem 'awesome_nested_set'
 gem 'the_sortable_tree', '~> 2.5.0'
+
+gem 'grape'
 
 group :development do
   gem 'better_errors'
